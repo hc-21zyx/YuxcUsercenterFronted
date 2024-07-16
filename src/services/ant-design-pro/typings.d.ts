@@ -3,10 +3,20 @@
 
 declare namespace API {
   type CurrentUser = {
+    id:number;
+    username:string;
+    userAccount:string;
+    avataUrl?:string;
+    gender:number;
+    phone:number;
+    email:string;
+    userStatus:number;
+    userRole:number;
+    createTime:Date;
+
     name?: string;
     avatar?: string;
     userid?: string;
-    email?: string;
     signature?: string;
     title?: string;
     group?: string;
@@ -28,6 +38,8 @@ declare namespace API {
     type?: string;
     currentAuthority?: string;
   };
+
+  type RegisterResult = number;
 
   type PageParams = {
     current?: number;
@@ -67,7 +79,12 @@ declare namespace API {
     autoLogin?: boolean;
     type?: string;
   };
-
+  type RegisterParams = {
+    userAccount?: string;
+    userPassword?: string;
+    checkPassword?: string;
+    type?: string;
+  };
   type ErrorResponse = {
     /** 业务约定的错误码 */
     errorCode: string;

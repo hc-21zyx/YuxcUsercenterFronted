@@ -9,11 +9,11 @@ import {
   ProFormCheckbox,
   ProFormText,
 } from '@ant-design/pro-components';
-import { Alert, message, Tabs } from 'antd';
+import {Alert, message, Tabs} from 'antd';
 import React, { useState } from 'react';
-import { history, useModel } from 'umi';
+import { history, Link, useModel } from 'umi';
 import styles from './index.less';
-import {SYSTEM_LOGO} from "@/constants";
+import {PLANT_LINK, SYSTEM_LOGO} from "@/constants";
 
 const LoginMessage: React.FC<{
   content: string;
@@ -78,7 +78,9 @@ const Login: React.FC = () => {
         <LoginForm
           logo={<img alt = "logo" src = {SYSTEM_LOGO} />}
           title="编程导航知识星球"
-          subTitle={'一个编程学习交流地'}
+          subTitle={
+            '一个编程学习交流地'
+          }
           initialValues={{
             autoLogin: true,
           }}
@@ -139,16 +141,22 @@ const Login: React.FC = () => {
               marginBottom: 24,
             }}
           >
+            {/*<Space split={<Divider type="vertical"/>}>*/}
             <ProFormCheckbox noStyle name="autoLogin">
               自动登录
             </ProFormCheckbox>
+            <Link to="/user/register">新用户注册</Link>
             <a
               style={{
                 float: 'right',
               }}
+              href={PLANT_LINK}
+              target="_blank"
+              rel="noreferrer"
             >
               忘记密码请联系zyx
             </a>
+            {/*</Space>*/}
           </div>
         </LoginForm>
       </div>
