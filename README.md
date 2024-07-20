@@ -1,7 +1,11 @@
-# 由于前端要补充的知识太多了(特指组件更新的速度),先暂时停止commit一段时间
+# 由于 Web 前端组件更新的速度太快,先暂时停止 commit 一段时间
+
 # 用户中心管理项目的前端代码
+
 # 注册登录
+
 # 用户管理
+
 # Ant Design Pro
 
 This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
